@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
-const MONGO_URL =
-  "mongodb+srv://priyarama0023:septemberalien@nasacluster.qkacdny.mongodb.net/nasa_db?retryWrites=true&w=majority";
+require("dotenv").config();
+
+const MONGO_URL = process.env.MONGO_URL;
 
 // Connect to MongoDB
 async function connectToDatabase() {
