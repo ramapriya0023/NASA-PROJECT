@@ -2,8 +2,6 @@ const http = require("http");
 const helmet = require("helmet");
 const app = require("./app");
 require("dotenv").config();
-const passport = require("passport");
-const session = require("express-session");
 
 const { loadPlanetsData } = require("./models/planets.model");
 const { connectToDatabase } = require("../config/database");

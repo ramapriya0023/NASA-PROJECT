@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 import Launch from "./Launch";
 import History from "./History";
 import Upcoming from "./Upcoming";
+import Login from "./Login";
 
 const styles = () => ({
   content: {
@@ -49,7 +50,6 @@ const AppLayout = (props) => {
   );
 
   const planets = usePlanets();
-  console.log(planets);
   return (
     <div className={classes.content}>
       <Header onNav={animateFrame} />
@@ -64,12 +64,7 @@ const AppLayout = (props) => {
             <div style={{ padding: "20px" }}>
               <Switch>
                 <Route exact path="/">
-                  <Launch
-                    entered={anim.entered}
-                    planets={planets}
-                    submitLaunch={submitLaunch}
-                    isPendingLaunch={isPendingLaunch}
-                  />
+                  <Login entered={anim.entered} />
                 </Route>
                 <Route exact path="/launch">
                   <Launch
