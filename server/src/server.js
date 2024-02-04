@@ -13,15 +13,6 @@ const PORT = process.env.PORT || 8001;
 const server = http.createServer(app);
 
 app.use(helmet());
-app.use(
-  session({
-    secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
 
 async function startServer() {
   connectToDatabase();
