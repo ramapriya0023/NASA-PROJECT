@@ -1,5 +1,5 @@
 import React from "react";
-import { Appear, Button, Loading, Paragraph } from "arwes";
+import { Appear, Button, Paragraph } from "arwes";
 import Clickable from "../components/Clickable";
 
 const Login = (props) => {
