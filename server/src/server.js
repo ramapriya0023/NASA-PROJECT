@@ -1,5 +1,4 @@
 const http = require("http");
-const helmet = require("helmet");
 const app = require("./app");
 require("dotenv").config();
 
@@ -9,8 +8,6 @@ const { loadLaunchData } = require("./models/launches.model");
 const PORT = process.env.PORT || 8001;
 
 const server = http.createServer(app);
-
-app.use(helmet());
 
 async function startServer() {
   connectToDatabase();
