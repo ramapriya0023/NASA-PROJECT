@@ -51,7 +51,6 @@ async function saveLaunch(launch) {
 }
 
 async function abortLaunchById(launchId) {
-  console.log(launchId);
   const aborted = await launches.updateOne(
     {
       flightNumber: launchId,

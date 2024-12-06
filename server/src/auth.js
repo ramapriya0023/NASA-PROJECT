@@ -15,7 +15,7 @@ passport.use(
       callbackURL: "http://localhost:8001/auth/google/callback",
     },
     (accessToken, refreshToken, profile, done) => {
-      // Use the profile information to create or update a user in your database
+      // We can use the profile information to create or update a user in the database
       return done(null, profile);
     }
   )
@@ -45,8 +45,18 @@ authRouter.get(
 );
 
 // Login route
-authRouter.get("/login", (req, res) => {
+authRouter.get("/", (req, res) => {
   res.send("Login page");
+});
+
+authRouter.get("/user", (req, res) => {
+  if (req.isAuthenticated()) {
+    res.status(200).json({
+      user: req.user,
+    });
+  } else {
+    res.status(401).json({ error: "Not authenticated" });
+  }
 });
 
 // Logout route

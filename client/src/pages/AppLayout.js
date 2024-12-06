@@ -13,6 +13,7 @@ import Launch from "./Launch";
 import History from "./History";
 import Upcoming from "./Upcoming";
 import Login from "./Login";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 const styles = () => ({
   content: {

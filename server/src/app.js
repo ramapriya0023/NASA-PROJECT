@@ -18,7 +18,7 @@ function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect("/login"); // Redirect to the login page if not authenticated
+  res.redirect("/");
 }
 
 app.use(
@@ -29,22 +29,21 @@ app.use(
   })
 );
 
-// Initialize Passport and restore authentication state from session
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Include the authentication routes
+app.use(express.json());
+
 app.use("/auth", authRoutes);
 app.use("/v1", ensureAuthenticated, api);
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3001",
   })
 );
 app.use(morgan("short"));
 
-app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 // Logout route

@@ -35,8 +35,6 @@ function loadPlanetsData() {
       })
       .on("end", async () => {
         const planetsFound = await getAllPlanets();
-        console.log(planetsFound);
-        console.log(`${planetsFound.length} habitable planets found!`);
         resolve();
       });
   });

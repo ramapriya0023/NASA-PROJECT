@@ -4,9 +4,8 @@ import Clickable from "../components/Clickable";
 
 const Login = (props) => {
   const handleGoogleSignIn = (event) => {
-    // Redirect to your authentication route (e.g., Google authentication)
     event.preventDefault();
-    window.location.href = encodeURI("http://localhost:8001/auth/google"); // Adjust the URL accordingly
+    window.location.href = encodeURI("http://localhost:8001/auth/google");
   };
 
   return (
