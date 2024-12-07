@@ -37,6 +37,11 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/v1", ensureAuthenticated, api);
 
+app.use((req, res, next) => {
+  console.log(`[DEBUG] ${req.method} ${req.url}`);
+  next();
+});
+
 app.use(
   cors({
     origin: "http://localhost:3001",
