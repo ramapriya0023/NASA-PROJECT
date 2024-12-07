@@ -5,9 +5,9 @@ import Clickable from "../components/Clickable";
 const Login = (props) => {
   const handleGoogleSignIn = (event) => {
     event.preventDefault();
-    console.log(`${process.env.REACT_APP_BASE_URL}/auth/google`);
+    console.log(`${process.env.REACT_APP_AUTH_REDIRECT_URL}/auth/google`);
     window.location.href = encodeURI(
-      `${process.env.REACT_APP_BASE_URL}/auth/google`
+      `${process.env.REACT_APP_AUTH_REDIRECT_URL}/auth/google`
     );
   };
 
