@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const fetchUserDetails = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_AUTH_REDIRECT_URL}/auth/user`,
+          `${process.env.REACT_APP_BASE_URL}/auth/user`,
           {
             credentials: "include",
           }
