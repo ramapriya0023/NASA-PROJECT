@@ -5,8 +5,9 @@ import Clickable from "../components/Clickable";
 const Login = (props) => {
   const handleGoogleSignIn = (event) => {
     event.preventDefault();
+    console.log(`${process.env.REACT_APP_BASE_URL}/auth/google`);
     window.location.href = encodeURI(
-      "https://nasa-launch-simulation-app-be.vercel.app/auth/google"
+      `${process.env.REACT_APP_BASE_URL}/auth/google`
     );
   };
 

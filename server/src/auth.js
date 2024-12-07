@@ -12,8 +12,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL:
-        "https://nasa-launch-simulation-app-be.vercel.app/auth/google/callback",
+      callbackURL: `${process.env.BASE_URL}/auth/google/callback`,
     },
     (accessToken, refreshToken, profile, done) => {
       // We can use the profile information to create or update a user in the database
