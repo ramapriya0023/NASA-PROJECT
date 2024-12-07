@@ -11,11 +11,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "env": {
-    "PORT": "8001",
-    "MONGO_URL": "mongodb+srv://priyarama0023:septemberalien@nasacluster.qkacdny.mongodb.net/nasa_db?retryWrites=true&w=majority",
-    "CLIENT_ID": "28207385627-mspn2t68ooa2j4na4en9sdnss1diecgd.apps.googleusercontent.com",
-    "CLIENT_SECRET": "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"
-  }
+  ]
 }
